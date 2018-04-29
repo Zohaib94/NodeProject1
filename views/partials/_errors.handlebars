@@ -1,0 +1,7 @@
+{{#if errors}}
+  <div class="alert alert-danger">
+    {{#each errors}}
+      <p>{{this.param}} {{this.msg}}</p>
+    {{/each}}
+  </div>
+{{/if}}

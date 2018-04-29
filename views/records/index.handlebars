@@ -1,0 +1,15 @@
+<h1>{{page_title}}</h1>
+
+{{#each records}}
+  <div class="card card-body mb-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+    <a href="/records/{{id}}/edit" class="btn btn-dark btn-block mb-2">Edit</a>
+    <form method="post" action="/records/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+  </div>
+{{else}}
+  <p>Records not found</p>
+{{/each}}
